@@ -1,0 +1,41 @@
+.canvas {
+    margin: 0 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.mainTitle {
+    font-size: 32px;
+}
+.container{
+    /* border: 2px solid #000; */
+    height: 500px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.settings, .sketchPad {
+    border: 2px solid #000;
+    height: 500px;
+    
+}
+
+.settings {
+   width: 200px;
+}
+
+.sketchPad {
+    width: 500px;
+}
+
+.colorPicker > input{
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+}
+input[type="color"] {
+    
+}
