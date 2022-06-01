@@ -38,7 +38,7 @@ pickedSize.addEventListener("change", () => {
 sketchPad.addEventListener("mouseover", (e) => {
   // to prevent the change of the background of the sketchpad
   if (e.target !== sketchPad) {
-    //change the background collr of the square
+    //change the background color of the square
 
     e.target.style.backgroundColor = colorPicker.value;
   }
