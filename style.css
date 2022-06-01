@@ -38,19 +38,14 @@
     width: 500px;
 }
 
-.colorPicker > input{
-  height: 50px;
-  width: 50px;
-  border-radius: 25px;
-}
+
 input[type="color"] {
-    
+   height: 50px;
+  width: 50px;
+  border-radius: 25px; 
 }
 
-.square {
-    
-    
-}
+
 
 .sizePicker {
     display: flex;

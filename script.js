@@ -1,6 +1,7 @@
 const sketchPad = document.querySelector(".sketchPad");
 const pickedSize = document.querySelector("#pickedSize");
 const size = document.querySelector("#size");
+const colorPicker = document.querySelector("#colorPicker");
 
 // function to draw the grid with size as input
 function drawGrid(size) {
@@ -31,6 +32,16 @@ function drawGrid(size) {
 pickedSize.addEventListener("change", () => {
   size.textContent = `${pickedSize.value} X ${pickedSize.value}`;
   drawGrid(pickedSize.value);
+});
+
+//Change the color of the square on mouseover
+sketchPad.addEventListener("mouseover", (e) => {
+  // to prevent the change of the background of the sketchpad
+  if (e.target !== sketchPad) {
+    //change the background collr of the square
+
+    e.target.style.backgroundColor = colorPicker.value;
+  }
 });
 
 //On page load
