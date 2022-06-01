@@ -2,6 +2,7 @@ const sketchPad = document.querySelector(".sketchPad");
 const pickedSize = document.querySelector("#pickedSize");
 const size = document.querySelector("#size");
 const colorPicker = document.querySelector("#colorPicker");
+const erase = document.querySelector("#erase");
 
 // function to draw the grid with size as input
 function drawGrid(size) {
@@ -34,13 +35,25 @@ pickedSize.addEventListener("change", () => {
   drawGrid(pickedSize.value);
 });
 
+//Setup the erase button
+erase.addEventListener("click", (e) => {
+  e.target.classList.toggle("active");
+  //   console.log(erase.getAttribute("class"));
+});
+
 //Change the color of the square on mouseover
 sketchPad.addEventListener("mouseover", (e) => {
   // to prevent the change of the background of the sketchpad
   if (e.target !== sketchPad) {
-    //change the background color of the square
-
+    // console.log(erase.getAttribute("class"));
+    //change the background color of the square with the color picked
     e.target.style.backgroundColor = colorPicker.value;
+    // if the erase button is active
+    if (erase.getAttribute("class") === "active") {
+      // remove the background color
+      e.target.style.backgroundColor = "#ffffff";
+      //console.log(e.target);
+    }
   }
 });
 
